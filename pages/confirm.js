@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { carList } from "./Data/carList";
 import Link from "next/link";
 
-export default function confirm() {
+export default function Confirm() {
   const [pickupCoordinates, setPickupCoordinates] = useState([0,0]);
   const [dropoffCoordinates, setDropoffCoordinates] = useState([0,0]);
   const router = useRouter();
