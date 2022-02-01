@@ -4,7 +4,7 @@ import { onAuthStateChanged, signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../firebase";
 import {useRouter} from "next/router";
 
-export default function login() {
+export default function Login() {
     const router = useRouter();
   useEffect(() => {
     onAuthStateChanged(auth, user => {

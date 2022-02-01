@@ -2,7 +2,7 @@ import React,{useState,useEffect} from "react";
 import tw from "tailwind-styled-components";
 import Link from "next/link";
 
-export default function search() {
+export default function Search() {
   const [pickup,setPickup] = useState('');
   const [dropoff,setDropoff] = useState('');
   console.log("Inputs:",pickup,dropoff);
