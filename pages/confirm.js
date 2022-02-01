@@ -3,7 +3,7 @@ import tw from "tailwind-styled-components";
 import Map from "./components/Map";
 import SelectRide from "./components/SelectRide";
 import { useRouter } from "next/router";
-import { carList } from "./Data/carList";
+import { carList } from "../Data/carList";
 import Link from "next/link";
 
 export default function Confirm() {
