@@ -24,7 +24,7 @@ export default function Confirm() {
     )
       .then(res => res.json())
       .then(data => {
-        setPickupCoordinates(data.features[0].center);
+        setPickupCoordinates(data?.features[0]?.center);
       });
   };
   const getDropoffCoordinates = () => {
@@ -38,14 +38,15 @@ export default function Confirm() {
     )
       .then(res => res.json())
       .then(data => {
-        setDropoffCoordinates(data.features[0].center);
+        setDropoffCoordinates(data?.features[0]?.center);
       });
   };
 
   useEffect(() => {
+    if(pickup && dropoff){
     getPickupCordinates();
     getDropoffCoordinates();
-  }, []);
+  }}, []);
 
   console.log("Coordinates", pickupCoordinates, dropoffCoordinates);
 
